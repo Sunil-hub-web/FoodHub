@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.foodhub">
+    package="in.fudhub.co">
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
@@ -18,7 +18,7 @@
         android:theme="@style/Theme.FoodApp"
         tools:targetApi="31">
         <activity
-            android:name=".TeramAndCondition"
+            android:name="in.fudhub.co.TeramAndCondition"
             android:exported="true">
           <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,22 +27,22 @@
             </intent-filter>-->
         </activity>
         <activity
-            android:name=".ChangePassword"
+            android:name="in.fudhub.co.ChangePassword"
             android:exported="true"></activity>
         <activity
-            android:name=".OTPVerifactionPage"
+            android:name="in.fudhub.co.OTPVerifactionPage"
             android:exported="true"></activity>
         <activity
-            android:name=".OrderSuccessFully"
+            android:name="in.fudhub.co.OrderSuccessFully"
             android:exported="false" />
         <activity
-            android:name=".SearchActivity"
+            android:name="in.fudhub.co.SearchActivity"
             android:exported="false" />
         <activity
-            android:name=".ForgotPassword"
+            android:name="in.fudhub.co.ForgotPassword"
             android:exported="true" />
         <activity
-            android:name=".SplashScreen"
+            android:name="in.fudhub.co.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,10 +51,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DeshBoard"
+            android:name="in.fudhub.co.DeshBoard"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="in.fudhub.co.MainActivity"
             android:exported="true" />
 
         <meta-data

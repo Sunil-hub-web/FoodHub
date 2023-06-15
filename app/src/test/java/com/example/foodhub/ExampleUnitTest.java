@@ -1,4 +1,4 @@
-package com.example.foodhub;
+package in.fudhub.co;
 
 import org.junit.Test;
 
