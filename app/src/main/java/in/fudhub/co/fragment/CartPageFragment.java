@@ -273,26 +273,28 @@ public class CartPageFragment extends Fragment {
 
                 if (!session.getUserID().equalsIgnoreCase("0")) {
 
-                    if(binding.tvChange.getText().toString().trim().equals("")){
+                    CreateProductArray();
 
-                        Toast.makeText(getActivity(), "Please select your Address", Toast.LENGTH_SHORT).show();
-
-                    }else{
-
-                        if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
-                            Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
-                        } else if (datetimeslot_layout.getVisibility() == View.GONE) {
-                            datetimeslot_layout.setVisibility(View.VISIBLE);
-                            cartlayout.setVisibility(View.GONE);
-                        }else if (dateselected.equalsIgnoreCase("")) {
-                            Toast.makeText(getActivity(), "Select Delivary Date", Toast.LENGTH_SHORT).show();
-                        }else if (slotname.trim().length()==0 || slotname.equalsIgnoreCase("Select time slot")) {
-                            Toast.makeText(getActivity(), "Select Time Slot", Toast.LENGTH_SHORT).show();
-                        } else {
-                            CreateProductArray();
-                        }
-
-                    }
+//                    if(binding.tvChange.getText().toString().trim().equals("")){
+//
+//                        Toast.makeText(getActivity(), "Please select your Address", Toast.LENGTH_SHORT).show();
+//
+//                    }else{
+//
+//                        if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
+//                            Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
+//                        } else if (datetimeslot_layout.getVisibility() == View.GONE) {
+//                            datetimeslot_layout.setVisibility(View.VISIBLE);
+//                            cartlayout.setVisibility(View.GONE);
+//                        }else if (dateselected.equalsIgnoreCase("")) {
+//                            Toast.makeText(getActivity(), "Select Delivary Date", Toast.LENGTH_SHORT).show();
+//                        }else if (slotname.trim().length()==0 || slotname.equalsIgnoreCase("Select time slot")) {
+//                            Toast.makeText(getActivity(), "Select Time Slot", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            CreateProductArray();
+//                        }
+//
+//                    }
 
                 } else {
 
