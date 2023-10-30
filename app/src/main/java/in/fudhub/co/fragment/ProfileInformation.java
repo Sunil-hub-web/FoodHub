@@ -229,7 +229,10 @@ public class ProfileInformation extends Fragment {
                 params.put("name",name);
                 params.put("email",email);
                 params.put("num",num);
-                params.put("user_name","");
+                params.put("user_name",name);
+
+                Log.d("parameters",params.toString());
+
                 return params;
             }
         };

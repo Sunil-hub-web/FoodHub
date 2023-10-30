@@ -40,6 +40,7 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
 import in.fudhub.co.DeshBoard;
 import in.fudhub.co.OrderSuccessFully;
 import in.fudhub.co.R;
@@ -101,7 +102,7 @@ public class CartPageFragment extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        binding = CartpageBinding.inflate(getLayoutInflater(),container,false);
+        binding = CartpageBinding.inflate(getLayoutInflater(), container, false);
         View view = binding.getRoot();
 
         progressbar = new ViewDialog(getActivity());
@@ -130,7 +131,7 @@ public class CartPageFragment extends Fragment {
 
         favouritesBeanSampleList = sharedPreference.loadFavorites(getActivity());
 
-       // Log.d("hgjbsz",favouritesBeanSampleList.toString());
+        // Log.d("hgjbsz",favouritesBeanSampleList.toString());
 
 /*        int cartcount = favouritesBeanSampleList.size();
 
@@ -273,26 +274,34 @@ public class CartPageFragment extends Fragment {
 
                 if (!session.getUserID().equalsIgnoreCase("0")) {
 
-                    if(binding.tvChange.getText().toString().trim().equals("")){
+                    if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
+                        Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
+                    } else {
 
-                        Toast.makeText(getActivity(), "Please select your Address", Toast.LENGTH_SHORT).show();
-
-                    }else{
-
-                        if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
-                            Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
-                        } else if (datetimeslot_layout.getVisibility() == View.GONE) {
-                            datetimeslot_layout.setVisibility(View.VISIBLE);
-                            cartlayout.setVisibility(View.GONE);
-                        }else if (dateselected.equalsIgnoreCase("")) {
-                            Toast.makeText(getActivity(), "Select Delivary Date", Toast.LENGTH_SHORT).show();
-                        }else if (slotname.trim().length()==0 || slotname.equalsIgnoreCase("Select time slot")) {
-                            Toast.makeText(getActivity(), "Select Time Slot", Toast.LENGTH_SHORT).show();
-                        } else {
-                            CreateProductArray();
-                        }
-
+                        CreateProductArray();
                     }
+
+
+//                    if(binding.tvChange.getText().toString().trim().equals("")){
+//
+//                        Toast.makeText(getActivity(), "Please select your Address", Toast.LENGTH_SHORT).show();
+//
+//                    }else{
+//
+//                        if (session.getBillFirstANme().equalsIgnoreCase("First Name")) {
+//                            Toast.makeText(getActivity(), "Selct Address", Toast.LENGTH_SHORT).show();
+//                        } else if (datetimeslot_layout.getVisibility() == View.GONE) {
+//                            datetimeslot_layout.setVisibility(View.VISIBLE);
+//                            cartlayout.setVisibility(View.GONE);
+//                        }else if (dateselected.equalsIgnoreCase("")) {
+//                            Toast.makeText(getActivity(), "Select Delivary Date", Toast.LENGTH_SHORT).show();
+//                        }else if (slotname.trim().length()==0 || slotname.equalsIgnoreCase("Select time slot")) {
+//                            Toast.makeText(getActivity(), "Select Time Slot", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            CreateProductArray();
+//                        }
+//
+//                    }
 
                 } else {
 
@@ -353,8 +362,8 @@ public class CartPageFragment extends Fragment {
 
                 Date time1 = new SimpleDateFormat("HH:mm:ss").parse("07:00:00");
                 Calendar calendar1 = Calendar.getInstance();
-              //  calendar1.setTime(time1);
-             //   calendar1.add(Calendar.DATE, 1);
+                //  calendar1.setTime(time1);
+                //   calendar1.add(Calendar.DATE, 1);
 
                 calendar1.set(Calendar.HOUR_OF_DAY, 16);
                 calendar1.set(Calendar.MINUTE, 0);
@@ -363,7 +372,7 @@ public class CartPageFragment extends Fragment {
                 Date time2 = new SimpleDateFormat("HH:mm:ss").parse("09:00:00");
                 Calendar calendar2 = Calendar.getInstance();
                 //calendar2.setTime(time2);
-              //  calendar2.add(Calendar.DATE, 1);
+                //  calendar2.add(Calendar.DATE, 1);
 
                 calendar2.set(Calendar.HOUR_OF_DAY, 17);
                 calendar2.set(Calendar.MINUTE, 0);
@@ -371,8 +380,8 @@ public class CartPageFragment extends Fragment {
 
                 Date time3 = new SimpleDateFormat("HH:mm:ss").parse("11:00:00");
                 Calendar calendar3 = Calendar.getInstance();
-               // calendar3.setTime(time3);
-               // calendar3.add(Calendar.DATE, 1);
+                // calendar3.setTime(time3);
+                // calendar3.add(Calendar.DATE, 1);
 
                 calendar3.set(Calendar.HOUR_OF_DAY, 18);
                 calendar3.set(Calendar.MINUTE, 0);
@@ -390,7 +399,7 @@ public class CartPageFragment extends Fragment {
                 Date time5 = new SimpleDateFormat("HH:mm:ss").parse("15:00:00");
                 Calendar calendar5 = Calendar.getInstance();
                 //calendar5.setTime(time5);
-               // calendar5.add(Calendar.DATE, 1);
+                // calendar5.add(Calendar.DATE, 1);
 
                 calendar5.set(Calendar.HOUR_OF_DAY, 20);
                 calendar5.set(Calendar.MINUTE, 0);
@@ -398,8 +407,8 @@ public class CartPageFragment extends Fragment {
 
                 Date time6 = new SimpleDateFormat("HH:mm:ss").parse("17:00:00");
                 Calendar calendar6 = Calendar.getInstance();
-               // calendar6.setTime(time6);
-               // calendar6.add(Calendar.DATE, 1);
+                // calendar6.setTime(time6);
+                // calendar6.add(Calendar.DATE, 1);
 
                 calendar6.set(Calendar.HOUR_OF_DAY, 21);
                 calendar6.set(Calendar.MINUTE, 0);
@@ -407,7 +416,7 @@ public class CartPageFragment extends Fragment {
 
                 Date time7 = new SimpleDateFormat("HH:mm:ss").parse("18:00:00");
                 Calendar calendar7 = Calendar.getInstance();
-               // calendar7.setTime(time7);
+                // calendar7.setTime(time7);
                 //calendar7.add(Calendar.DATE, 1);
 
                 calendar7.set(Calendar.HOUR_OF_DAY, 22);
@@ -478,7 +487,7 @@ public class CartPageFragment extends Fragment {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray8, R.layout.spinnerfront2);
 
-                }else if (x.before(calendar9.getTime())) {
+                } else if (x.before(calendar9.getTime())) {
                     adapter = ArrayAdapter.createFromResource(getActivity(),
                             R.array.timearray9, R.layout.spinnerfront2);
 
@@ -519,9 +528,9 @@ public class CartPageFragment extends Fragment {
 
 //        Log.d("RanjeetCartPage", String.valueOf(favouritesBeanSampleList.size()));
         CartPageFragment.sum = 0.00;
-        if (favouritesBeanSampleList==null){
+        if (favouritesBeanSampleList == null) {
 
-        }else {
+        } else {
             if (favouritesBeanSampleList.size() == 0) {
 
             } else {
@@ -536,7 +545,7 @@ public class CartPageFragment extends Fragment {
 
                 itemtotal.setText("₹" + sum);
 
-                if(sum >= 250){
+                if (sum >= 250) {
 
                     delivery_ch = 0.0;
                     Log.d("Frfbw_2", String.valueOf(sum));
@@ -548,7 +557,7 @@ public class CartPageFragment extends Fragment {
                     Log.d("Frfbw_3", String.valueOf(totsm));
 
 
-                }else{
+                } else {
 
                     delivery_ch = 50.0;
 
@@ -594,7 +603,7 @@ public class CartPageFragment extends Fragment {
 
                                     //deliverychargesarray.add(name);
                                     //deliverychargesid.put(name, shipping_id);
-                                   // deliverychargesprice.put(name, price);
+                                    // deliverychargesprice.put(name, price);
 
                                 }
 

@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import in.fudhub.co.R;
 import in.fudhub.co.model.OrderItemGetSet;
 
@@ -57,6 +59,9 @@ public class OrderItemAdapter extends RecyclerView.Adapter<OrderItemAdapter.MyVi
 //        holder. date.setText(category.getDate());
         holder. tv_product_weight.setText("Qty : "+category.getQty());
         holder. tv_new_price.setText("₹ "+category.getPrice());
+        Glide.with(mContext)
+                .load(category.getImg())
+                .into(holder.iv_product_image);
 
 //        Glide.with(mContext)
 //                .load(category.getImg())
