@@ -585,6 +585,7 @@ public class CartPageFragment extends Fragment {
                         Log.d("cityget", session.getUserID());
                         try {
                             JSONObject jsonObject = new JSONObject(response);
+
                             if (jsonObject.getString("success").equals("true")) {
                                 deliverychargesarray = new ArrayList<String>();
 

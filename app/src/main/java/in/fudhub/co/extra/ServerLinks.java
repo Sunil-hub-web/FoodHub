@@ -14,7 +14,7 @@ public class ServerLinks {
     public static String profile_url =  main_url+"method=getProfile";
     public static String addresslist_url =  main_url+"method=getAddress";
     public static String removeaddress_url =  main_url+"method=delAddress";
-    public static String ShippingChr_url =  main_url+"method=getShimethod=getProductspping";
+    public static String ShippingChr_url =  main_url+"method=getShipping";
     public static String Placeorder_url =  main_url+"method=placeorder";
     public static String GetOrders_url =  main_url+"method=GetOrders";
     public static String GetLocations_url =  main_url+"method=getLocations";
